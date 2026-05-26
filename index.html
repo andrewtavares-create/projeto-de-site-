@@ -1,0 +1,1425 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Resumos acadêmicos completos, organizados por especialistas. Estude menos horas com mais resultado. ENEM, vestibular e concursos públicos.">
+    <meta property="og:title" content="StudyPack — Resumos Acadêmicos que Realmente Funcionam">
+    <meta property="og:description" content="Pare de perder horas tentando resumir. Conteúdo pronto, organizado e criado por especialistas.">
+    <title>StudyPack — Resumos Acadêmicos que Realmente Funcionam</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+    /* ============================================================
+       RESET & BASE
+    ============================================================ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        color: #1E293B;
+        background: #ffffff;
+        line-height: 1.7;
+        -webkit-font-smoothing: antialiased;
+    }
+    img { max-width: 100%; height: auto; display: block; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+    button { font-family: inherit; }
+
+    /* ============================================================
+       CSS VARIABLES
+    ============================================================ */
+    :root {
+        --primary:        #2563EB;
+        --primary-dark:   #1D4ED8;
+        --primary-light:  #EFF6FF;
+        --accent:         #F59E0B;
+        --accent-dark:    #D97706;
+        --dark:           #0F172A;
+        --dark-2:         #1E293B;
+        --text:           #1E293B;
+        --text-muted:     #64748B;
+        --border:         #E2E8F0;
+        --light:          #F8FAFF;
+        --light-2:        #F1F5F9;
+        --white:          #FFFFFF;
+        --success:        #10B981;
+        --purple:         #7C3AED;
+        --radius:         12px;
+        --radius-lg:      20px;
+        --radius-xl:      28px;
+        --shadow:         0 4px 24px rgba(0,0,0,0.08);
+        --shadow-lg:      0 8px 48px rgba(0,0,0,0.12);
+        --shadow-xl:      0 16px 64px rgba(0,0,0,0.16);
+        --t:              0.3s ease;
+        --t-fast:         0.15s ease;
+    }
+
+    /* ============================================================
+       TYPOGRAPHY
+    ============================================================ */
+    h1, h2 {
+        font-family: 'Playfair Display', Georgia, serif;
+        line-height: 1.15;
+        letter-spacing: -0.02em;
+    }
+    h3, h4, h5, h6 { font-family: 'Inter', sans-serif; line-height: 1.3; }
+
+    /* ============================================================
+       LAYOUT
+    ============================================================ */
+    .container    { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .container-sm { max-width:  780px; margin: 0 auto; padding: 0 24px; }
+    .section    { padding: 96px 0; }
+    .section-sm { padding: 64px 0; }
+
+    /* ============================================================
+       BUTTONS
+    ============================================================ */
+    .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 14px 28px;
+        border-radius: var(--radius);
+        font-size: 15px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all var(--t);
+        border: 2px solid transparent;
+        white-space: nowrap;
+        letter-spacing: 0.01em;
+    }
+    .btn-lg { padding: 18px 36px; font-size: 17px; border-radius: var(--radius-lg); }
+    .btn-primary {
+        background: var(--primary); color: var(--white); border-color: var(--primary);
+        box-shadow: 0 4px 16px rgba(37,99,235,0.28);
+    }
+    .btn-primary:hover {
+        background: var(--primary-dark); border-color: var(--primary-dark);
+        transform: translateY(-2px); box-shadow: 0 6px 24px rgba(37,99,235,0.4);
+    }
+    .btn-accent {
+        background: var(--accent); color: var(--dark); border-color: var(--accent);
+        box-shadow: 0 4px 16px rgba(245,158,11,0.28);
+    }
+    .btn-accent:hover {
+        background: var(--accent-dark); border-color: var(--accent-dark);
+        transform: translateY(-2px); box-shadow: 0 6px 24px rgba(245,158,11,0.4);
+    }
+    .btn-ghost {
+        background: transparent; color: var(--white);
+        border-color: rgba(255,255,255,0.35);
+    }
+    .btn-ghost:hover {
+        background: rgba(255,255,255,0.1);
+        border-color: rgba(255,255,255,0.65);
+    }
+    .btn-outline {
+        background: transparent; color: var(--primary); border-color: var(--primary);
+    }
+    .btn-outline:hover {
+        background: var(--primary); color: var(--white); transform: translateY(-2px);
+    }
+
+    /* ============================================================
+       BADGES / TAGS
+    ============================================================ */
+    .badge {
+        display: inline-flex; align-items: center; gap: 6px;
+        padding: 6px 14px; border-radius: 100px;
+        font-size: 13px; font-weight: 600; letter-spacing: 0.03em;
+    }
+    .badge-accent  { background: rgba(245,158,11,0.14); color: var(--accent); border: 1px solid rgba(245,158,11,0.3); }
+    .badge-primary { background: var(--primary-light); color: var(--primary); border: 1px solid rgba(37,99,235,0.2); }
+    .badge-success { background: rgba(16,185,129,0.1); color: var(--success); border: 1px solid rgba(16,185,129,0.2); }
+
+    /* ============================================================
+       SECTION HEADERS
+    ============================================================ */
+    .section-header { text-align: center; margin-bottom: 56px; }
+    .section-tag {
+        display: inline-flex; align-items: center; gap: 6px;
+        padding: 6px 14px; background: var(--primary-light);
+        color: var(--primary); border-radius: 100px;
+        font-size: 13px; font-weight: 600; letter-spacing: 0.04em;
+        margin-bottom: 16px;
+    }
+    .section-header h2 { font-size: clamp(28px, 4vw, 44px); color: var(--text); margin-bottom: 16px; }
+    .section-header p  { font-size: 18px; color: var(--text-muted); max-width: 600px; margin: 0 auto; }
+
+    /* ============================================================
+       ANNOUNCEMENT BAR
+    ============================================================ */
+    .announcement-bar {
+        background: var(--dark); color: rgba(255,255,255,0.85);
+        text-align: center; padding: 11px 24px;
+        font-size: 14px; font-weight: 500; letter-spacing: 0.01em;
+    }
+    .announcement-bar strong { color: var(--accent); }
+    .announcement-bar a { color: var(--accent); text-decoration: underline; margin-left: 8px; font-weight: 600; }
+
+    /* ============================================================
+       HEADER
+    ============================================================ */
+    .header {
+        position: sticky; top: 0; z-index: 1000;
+        background: rgba(255,255,255,0.96);
+        backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--border);
+        transition: box-shadow var(--t);
+    }
+    .header.scrolled { box-shadow: var(--shadow); }
+    .header-inner {
+        display: flex; align-items: center; justify-content: space-between;
+        height: 72px; gap: 32px;
+    }
+    .logo {
+        display: flex; align-items: center; gap: 10px;
+        font-size: 22px; font-weight: 800; color: var(--dark); letter-spacing: -0.03em;
+    }
+    .logo-icon {
+        width: 40px; height: 40px;
+        background: linear-gradient(135deg, var(--primary), var(--purple));
+        border-radius: 10px; display: flex; align-items: center;
+        justify-content: center; color: white; font-size: 17px;
+    }
+    .logo span { color: var(--primary); }
+    .nav { display: flex; align-items: center; gap: 4px; }
+    .nav a {
+        padding: 8px 14px; border-radius: 8px; font-size: 14px;
+        font-weight: 500; color: var(--text-muted); transition: all var(--t-fast);
+    }
+    .nav a:hover { background: var(--light); color: var(--text); }
+    .header-cta { display: flex; align-items: center; gap: 12px; }
+    .menu-toggle {
+        display: none; background: none; border: none; cursor: pointer;
+        padding: 8px; color: var(--text); font-size: 20px;
+    }
+
+    /* ============================================================
+       HERO
+    ============================================================ */
+    .hero {
+        background: linear-gradient(135deg, #0B1120 0%, #1a2744 45%, #0F172A 100%);
+        padding: 100px 0 84px; position: relative; overflow: hidden;
+    }
+    .hero::before {
+        content: ''; position: absolute;
+        top: -40%; left: -15%; width: 55%; height: 200%;
+        background: radial-gradient(ellipse, rgba(37,99,235,0.14) 0%, transparent 65%);
+        pointer-events: none;
+    }
+    .hero::after {
+        content: ''; position: absolute;
+        bottom: -30%; right: -5%; width: 45%; height: 140%;
+        background: radial-gradient(ellipse, rgba(245,158,11,0.07) 0%, transparent 65%);
+        pointer-events: none;
+    }
+    .hero-inner {
+        position: relative; z-index: 1;
+        max-width: 880px; margin: 0 auto; text-align: center;
+    }
+    .hero-badge {
+        display: inline-flex; align-items: center; gap: 8px;
+        background: rgba(245,158,11,0.12); color: var(--accent);
+        border: 1px solid rgba(245,158,11,0.26);
+        padding: 8px 20px; border-radius: 100px;
+        font-size: 14px; font-weight: 600; margin-bottom: 28px; letter-spacing: 0.02em;
+    }
+    .hero-badge .dot {
+        width: 8px; height: 8px; background: var(--accent);
+        border-radius: 50%; animation: pulse 2.2s infinite;
+    }
+    @keyframes pulse {
+        0%, 100% { opacity: 1; transform: scale(1); }
+        50% { opacity: 0.5; transform: scale(0.8); }
+    }
+    .hero h1 { font-size: clamp(34px, 5.5vw, 66px); color: var(--white); margin-bottom: 24px; }
+    .hero h1 em { font-style: italic; color: var(--accent); }
+    .hero-sub {
+        font-size: clamp(16px, 2vw, 20px); color: rgba(255,255,255,0.7);
+        max-width: 680px; margin: 0 auto 44px; line-height: 1.75;
+    }
+    .hero-actions {
+        display: flex; gap: 16px; justify-content: center;
+        flex-wrap: wrap; margin-bottom: 48px;
+    }
+    .hero-trust {
+        display: flex; align-items: center; justify-content: center;
+        gap: 28px; flex-wrap: wrap;
+    }
+    .hero-trust-item {
+        display: flex; align-items: center; gap: 7px;
+        color: rgba(255,255,255,0.58); font-size: 14px; font-weight: 500;
+    }
+    .hero-trust-item i     { color: var(--success); font-size: 15px; }
+    .hero-trust-item .stars { color: var(--accent); letter-spacing: 1px; }
+
+    /* ============================================================
+       STATS BAR
+    ============================================================ */
+    .stats-bar {
+        background: var(--white);
+        border-bottom: 1px solid var(--border); padding: 28px 0;
+    }
+    .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); }
+    .stat-item {
+        text-align: center; padding: 16px 20px;
+        border-right: 1px solid var(--border);
+        transition: transform var(--t);
+    }
+    .stat-item:last-child { border-right: none; }
+    .stat-item:hover { transform: translateY(-2px); }
+    .stat-number {
+        font-size: clamp(28px, 3vw, 42px); font-weight: 900;
+        color: var(--dark); line-height: 1; margin-bottom: 6px;
+        letter-spacing: -0.03em;
+    }
+    .stat-number span { color: var(--primary); }
+    .stat-label { font-size: 13px; color: var(--text-muted); font-weight: 500; }
+
+    /* ============================================================
+       HOW IT WORKS
+    ============================================================ */
+    .how-it-works { background: var(--light); }
+    .steps-grid {
+        display: grid; grid-template-columns: repeat(3, 1fr);
+        gap: 28px; position: relative;
+    }
+    .steps-grid::before {
+        content: ''; position: absolute;
+        top: 35px; left: calc(16.67% + 36px); right: calc(16.67% + 36px);
+        height: 2px;
+        background: linear-gradient(to right, transparent, var(--border), var(--primary), var(--border), transparent);
+        pointer-events: none;
+    }
+    .step-card {
+        background: var(--white); border-radius: var(--radius-lg);
+        padding: 40px 28px; text-align: center;
+        border: 1px solid var(--border); position: relative;
+        transition: all var(--t);
+    }
+    .step-card:hover {
+        border-color: var(--primary); box-shadow: var(--shadow-lg);
+        transform: translateY(-5px);
+    }
+    .step-number {
+        width: 70px; height: 70px;
+        background: linear-gradient(135deg, var(--primary), var(--purple));
+        border-radius: 50%; display: flex; align-items: center; justify-content: center;
+        font-size: 26px; font-weight: 900; color: white;
+        margin: 0 auto 22px; position: relative; z-index: 1;
+        box-shadow: 0 4px 20px rgba(37,99,235,0.32);
+    }
+    .step-card h3 { font-size: 18px; font-weight: 700; margin-bottom: 12px; color: var(--dark); }
+    .step-card p  { font-size: 15px; color: var(--text-muted); line-height: 1.65; }
+
+    /* ============================================================
+       PRODUCTS
+    ============================================================ */
+    .products { background: var(--white); }
+    .plans-grid {
+        display: grid; grid-template-columns: repeat(3, 1fr);
+        gap: 24px; align-items: start;
+    }
+    .plan-card {
+        background: var(--white); border: 2px solid var(--border);
+        border-radius: var(--radius-xl); padding: 36px 28px;
+        position: relative; transition: all var(--t);
+    }
+    .plan-card:hover { border-color: var(--primary); box-shadow: var(--shadow-xl); transform: translateY(-4px); }
+    .plan-card.popular { border-color: var(--primary); box-shadow: var(--shadow-xl); transform: translateY(-14px); }
+    .popular-badge {
+        position: absolute; top: -14px; left: 50%; transform: translateX(-50%);
+        background: linear-gradient(135deg, var(--primary), var(--purple));
+        color: white; padding: 6px 20px; border-radius: 100px;
+        font-size: 12px; font-weight: 700; letter-spacing: 0.06em; white-space: nowrap;
+    }
+    .plan-name {
+        font-size: 12px; font-weight: 700; letter-spacing: 0.1em;
+        text-transform: uppercase; color: var(--primary); margin-bottom: 6px;
+    }
+    .plan-title { font-size: 22px; font-weight: 800; color: var(--dark); margin-bottom: 18px; }
+    .plan-price { margin-bottom: 6px; }
+    .plan-price .from { font-size: 14px; color: var(--text-muted); text-decoration: line-through; }
+    .plan-price .current { display: flex; align-items: baseline; gap: 2px; }
+    .plan-price .currency { font-size: 18px; font-weight: 700; color: var(--dark); }
+    .plan-price .amount   { font-size: 52px; font-weight: 900; color: var(--dark); line-height: 1; letter-spacing: -0.03em; }
+    .plan-price .cents    { font-size: 24px; font-weight: 700; color: var(--dark); }
+    .plan-desc {
+        font-size: 14px; color: var(--text-muted); margin-bottom: 22px;
+        padding-bottom: 22px; border-bottom: 1px solid var(--border);
+    }
+    .plan-features { display: flex; flex-direction: column; gap: 11px; margin-bottom: 28px; }
+    .plan-feature  { display: flex; align-items: center; gap: 10px; font-size: 14px; color: var(--text); }
+    .plan-feature .check {
+        width: 20px; height: 20px; background: rgba(16,185,129,0.1);
+        border-radius: 50%; display: flex; align-items: center; justify-content: center;
+        color: var(--success); font-size: 10px; flex-shrink: 0;
+    }
+    .plan-feature.bonus { color: var(--primary); font-weight: 600; }
+    .plan-feature.bonus .check { background: rgba(37,99,235,0.1); color: var(--primary); }
+    .plan-guarantee {
+        text-align: center; font-size: 13px; color: var(--text-muted);
+        margin-top: 12px; display: flex; align-items: center;
+        justify-content: center; gap: 6px;
+    }
+    .plan-guarantee i { color: var(--success); }
+
+    /* ============================================================
+       BENEFITS
+    ============================================================ */
+    .benefits { background: var(--light); }
+    .benefits-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+    .benefit-card {
+        background: var(--white); border-radius: var(--radius-lg);
+        padding: 32px 24px; border: 1px solid var(--border);
+        transition: all var(--t);
+    }
+    .benefit-card:hover { border-color: var(--primary); box-shadow: var(--shadow); transform: translateY(-4px); }
+    .benefit-icon {
+        width: 56px; height: 56px; border-radius: var(--radius);
+        display: flex; align-items: center; justify-content: center;
+        font-size: 24px; margin-bottom: 20px;
+    }
+    .benefit-icon.blue   { background: rgba(37,99,235,0.1);   color: var(--primary); }
+    .benefit-icon.amber  { background: rgba(245,158,11,0.1);  color: var(--accent); }
+    .benefit-icon.green  { background: rgba(16,185,129,0.1);  color: var(--success); }
+    .benefit-icon.purple { background: rgba(124,58,237,0.1);  color: var(--purple); }
+    .benefit-icon.red    { background: rgba(239,68,68,0.1);   color: #EF4444; }
+    .benefit-icon.indigo { background: rgba(99,102,241,0.1);  color: #6366F1; }
+    .benefit-card h3 { font-size: 17px; font-weight: 700; color: var(--dark); margin-bottom: 10px; }
+    .benefit-card p  { font-size: 14px; color: var(--text-muted); line-height: 1.65; }
+
+    /* ============================================================
+       TESTIMONIALS
+    ============================================================ */
+    .testimonials { background: var(--white); }
+    .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+    .testimonial-card {
+        background: var(--light); border-radius: var(--radius-lg);
+        padding: 32px 28px; border: 1px solid var(--border);
+        position: relative; transition: all var(--t);
+    }
+    .testimonial-card::before {
+        content: '\201C'; position: absolute;
+        top: 12px; right: 22px; font-size: 90px;
+        font-family: 'Playfair Display', serif;
+        color: var(--border); line-height: 1; pointer-events: none;
+    }
+    .testimonial-card:hover { border-color: var(--primary); box-shadow: var(--shadow); }
+    .testimonial-stars { color: var(--accent); font-size: 15px; margin-bottom: 16px; letter-spacing: 2px; }
+    .testimonial-text {
+        font-size: 15px; color: var(--text); line-height: 1.75;
+        margin-bottom: 24px; font-style: italic;
+    }
+    .testimonial-author { display: flex; align-items: center; gap: 12px; }
+    .author-avatar {
+        width: 44px; height: 44px; border-radius: 50%;
+        background: linear-gradient(135deg, var(--primary), var(--purple));
+        display: flex; align-items: center; justify-content: center;
+        font-size: 17px; font-weight: 700; color: white; flex-shrink: 0;
+    }
+    .author-info strong { display: block; font-size: 14px; font-weight: 700; color: var(--dark); }
+    .author-info span   { font-size: 13px; color: var(--text-muted); }
+
+    /* ============================================================
+       OBJECTIONS
+    ============================================================ */
+    .objections { background: var(--light); }
+    .objections-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+    .objection-card {
+        background: var(--white); border-radius: var(--radius-lg);
+        padding: 28px 24px; border: 1px solid var(--border); transition: all var(--t);
+    }
+    .objection-card:hover { border-color: var(--primary); box-shadow: var(--shadow); }
+    .objection-question { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 14px; }
+    .objection-icon {
+        width: 32px; height: 32px; background: rgba(37,99,235,0.08);
+        border-radius: 8px; display: flex; align-items: center; justify-content: center;
+        color: var(--primary); font-size: 13px; flex-shrink: 0; margin-top: 2px;
+    }
+    .objection-question h4 { font-size: 16px; font-weight: 700; color: var(--dark); line-height: 1.4; }
+    .objection-answer { font-size: 14px; color: var(--text-muted); line-height: 1.75; padding-left: 44px; }
+
+    /* ============================================================
+       CTA SECTION
+    ============================================================ */
+    .cta-section {
+        background: linear-gradient(135deg, #0B1120 0%, #1a2744 100%);
+        padding: 104px 0; position: relative; overflow: hidden;
+    }
+    .cta-section::before {
+        content: ''; position: absolute; inset: 0;
+        background:
+            radial-gradient(ellipse at 25% 50%, rgba(37,99,235,0.16) 0%, transparent 60%),
+            radial-gradient(ellipse at 75% 50%, rgba(245,158,11,0.08) 0%, transparent 60%);
+        pointer-events: none;
+    }
+    .cta-inner { position: relative; z-index: 1; text-align: center; }
+    .cta-inner .badge { margin-bottom: 24px; }
+    .cta-inner h2 { color: var(--white); font-size: clamp(30px, 5vw, 52px); margin-bottom: 20px; }
+    .cta-inner h2 em { font-style: italic; color: var(--accent); }
+    .cta-inner p {
+        font-size: 18px; color: rgba(255,255,255,0.68);
+        max-width: 560px; margin: 0 auto 36px; line-height: 1.75;
+    }
+    .cta-trust-row {
+        display: flex; justify-content: center; gap: 32px;
+        flex-wrap: wrap; margin-top: 40px;
+    }
+    .cta-trust-item {
+        display: flex; align-items: center; gap: 7px;
+        color: rgba(255,255,255,0.6); font-size: 14px; font-weight: 500;
+    }
+    .cta-trust-item i { color: var(--success); }
+
+    /* ============================================================
+       FAQ
+    ============================================================ */
+    .faq { background: var(--white); }
+    .faq-list { max-width: 780px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; }
+    .faq-item {
+        border: 1px solid var(--border); border-radius: var(--radius);
+        overflow: hidden; transition: border-color var(--t-fast);
+    }
+    .faq-item.open { border-color: var(--primary); }
+    .faq-question {
+        padding: 20px 24px; display: flex; align-items: center;
+        justify-content: space-between; gap: 16px; cursor: pointer;
+        font-size: 16px; font-weight: 600; color: var(--dark);
+        background: none; border: none; width: 100%; text-align: left;
+        transition: background var(--t-fast);
+    }
+    .faq-question:hover { background: var(--light); }
+    .faq-icon {
+        width: 28px; height: 28px; background: var(--light);
+        border-radius: 50%; display: flex; align-items: center; justify-content: center;
+        color: var(--primary); font-size: 12px; flex-shrink: 0;
+        transition: all var(--t-fast);
+    }
+    .faq-item.open .faq-icon { background: var(--primary); color: white; transform: rotate(45deg); }
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.36s ease; }
+    .faq-answer.open { max-height: 280px; }
+    .faq-answer-inner {
+        padding: 0 24px 20px; font-size: 15px;
+        color: var(--text-muted); line-height: 1.75;
+    }
+
+    /* ============================================================
+       FOOTER
+    ============================================================ */
+    .footer { background: var(--dark); color: rgba(255,255,255,0.65); padding: 64px 0 32px; }
+    .footer-grid {
+        display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
+        gap: 48px; margin-bottom: 48px;
+    }
+    .footer-logo {
+        display: flex; align-items: center; gap: 10px;
+        font-size: 20px; font-weight: 800; color: var(--white);
+    }
+    .footer-brand p {
+        font-size: 14px; line-height: 1.75; margin: 14px 0 22px; max-width: 280px;
+    }
+    .footer-social { display: flex; gap: 10px; }
+    .footer-social a {
+        width: 36px; height: 36px; background: rgba(255,255,255,0.08);
+        border-radius: 8px; display: flex; align-items: center; justify-content: center;
+        font-size: 15px; color: rgba(255,255,255,0.55); transition: all var(--t-fast);
+    }
+    .footer-social a:hover { background: var(--primary); color: white; transform: translateY(-2px); }
+    .footer-col h4 {
+        font-size: 12px; font-weight: 700; color: var(--white);
+        letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 18px;
+    }
+    .footer-col ul { display: flex; flex-direction: column; gap: 10px; }
+    .footer-col ul li a { font-size: 14px; color: rgba(255,255,255,0.55); transition: color var(--t-fast); }
+    .footer-col ul li a:hover { color: var(--white); }
+    .footer-bottom {
+        padding-top: 32px; border-top: 1px solid rgba(255,255,255,0.1);
+        display: flex; align-items: center; justify-content: space-between;
+        flex-wrap: wrap; gap: 16px; font-size: 13px; color: rgba(255,255,255,0.38);
+    }
+    .footer-bottom a { color: rgba(255,255,255,0.46); transition: color var(--t-fast); }
+    .footer-bottom a:hover { color: var(--white); }
+
+    /* ============================================================
+       WHATSAPP FLOAT
+    ============================================================ */
+    .whatsapp-float {
+        position: fixed; bottom: 28px; right: 28px; z-index: 998;
+        width: 60px; height: 60px; background: #25D366;
+        border-radius: 50%; display: flex; align-items: center;
+        justify-content: center; font-size: 28px; color: white;
+        box-shadow: 0 4px 24px rgba(37,211,102,0.42);
+        transition: all var(--t); animation: float 3.2s ease-in-out infinite;
+    }
+    .whatsapp-float:hover { transform: scale(1.1); animation: none; box-shadow: 0 6px 32px rgba(37,211,102,0.55); }
+    @keyframes float {
+        0%, 100% { transform: translateY(0); }
+        50%       { transform: translateY(-7px); }
+    }
+
+    /* ============================================================
+       MOBILE MENU
+    ============================================================ */
+    .mobile-menu {
+        display: none; position: fixed; inset: 0;
+        background: rgba(0,0,0,0.5); z-index: 9999;
+        align-items: flex-start; justify-content: flex-end;
+    }
+    .mobile-menu.active { display: flex; }
+    .mobile-menu-panel {
+        background: var(--white); width: 280px; height: 100%;
+        padding: 24px; display: flex; flex-direction: column;
+        gap: 6px; overflow-y: auto;
+    }
+    .mobile-menu-close {
+        align-self: flex-end; background: none; border: none;
+        font-size: 24px; cursor: pointer; color: var(--text); padding: 4px; margin-bottom: 16px;
+    }
+    .mobile-menu-panel a {
+        padding: 14px 16px; border-radius: 8px; font-size: 16px;
+        font-weight: 500; color: var(--text); display: block; transition: background var(--t-fast);
+    }
+    .mobile-menu-panel a:hover { background: var(--light); }
+    .mobile-menu-panel .btn { margin-top: 8px; justify-content: center; }
+
+    /* ============================================================
+       FADE-IN ANIMATION
+    ============================================================ */
+    .fade-in {
+        opacity: 0; transform: translateY(22px);
+        transition: opacity 0.65s ease, transform 0.65s ease;
+    }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+    /* ============================================================
+       GUARANTEE BADGE
+    ============================================================ */
+    .guarantee-box {
+        display: flex; align-items: center; gap: 16px;
+        background: rgba(16,185,129,0.08); border: 1px solid rgba(16,185,129,0.25);
+        border-radius: var(--radius); padding: 16px 20px;
+        max-width: 560px; margin: 0 auto 40px;
+    }
+    .guarantee-box i { font-size: 28px; color: var(--success); flex-shrink: 0; }
+    .guarantee-box p { font-size: 15px; color: rgba(255,255,255,0.8); line-height: 1.5; }
+    .guarantee-box p strong { color: var(--white); }
+
+    /* ============================================================
+       RESPONSIVE
+    ============================================================ */
+    @media (max-width: 1024px) {
+        .plans-grid    { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; }
+        .plan-card.popular { transform: none; }
+        .footer-grid   { grid-template-columns: 1fr 1fr; gap: 32px; }
+        .benefits-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 768px) {
+        .section { padding: 64px 0; }
+        .nav, .header-cta { display: none; }
+        .menu-toggle { display: flex; }
+        .stats-grid { grid-template-columns: repeat(2, 1fr); }
+        .stat-item:nth-child(2) { border-right: none; }
+        .stat-item:nth-child(3),
+        .stat-item:nth-child(4) { border-top: 1px solid var(--border); }
+        .steps-grid            { grid-template-columns: 1fr; gap: 20px; }
+        .steps-grid::before    { display: none; }
+        .benefits-grid         { grid-template-columns: 1fr; }
+        .testimonials-grid     { grid-template-columns: 1fr; }
+        .objections-grid       { grid-template-columns: 1fr; }
+        .footer-grid           { grid-template-columns: 1fr; }
+        .footer-bottom         { flex-direction: column; text-align: center; }
+        .hero-actions          { flex-direction: column; align-items: center; }
+        .cta-trust-row         { flex-direction: column; align-items: center; gap: 14px; }
+        .hero-trust            { flex-direction: column; gap: 12px; }
+        .guarantee-box         { flex-direction: column; text-align: center; }
+    }
+    @media (max-width: 480px) {
+        .container { padding: 0 16px; }
+    }
+    </style>
+</head>
+<body>
+
+<!-- ==========================================
+     ANNOUNCEMENT BAR
+=========================================== -->
+<div class="announcement-bar">
+    🎓 <strong>OFERTA ESPECIAL:</strong> Acesso Ilimitado com 51% OFF — apenas esta semana.
+    <a href="#produtos">Ver oferta →</a>
+</div>
+
+<!-- ==========================================
+     HEADER
+=========================================== -->
+<header class="header" id="header">
+    <div class="container">
+        <div class="header-inner">
+            <a href="#" class="logo">
+                <div class="logo-icon"><i class="fas fa-book-open"></i></div>
+                Study<span>Pack</span>
+            </a>
+
+            <nav class="nav">
+                <a href="#como-funciona">Como Funciona</a>
+                <a href="#produtos">Produtos</a>
+                <a href="#depoimentos">Depoimentos</a>
+                <a href="#faq">FAQ</a>
+            </nav>
+
+            <div class="header-cta">
+                <a href="#produtos" class="btn btn-primary">
+                    <i class="fas fa-bolt"></i> Começar Agora
+                </a>
+            </div>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </div>
+</header>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-panel">
+        <button class="mobile-menu-close" id="menuClose"><i class="fas fa-times"></i></button>
+        <a href="#como-funciona">Como Funciona</a>
+        <a href="#produtos">Produtos</a>
+        <a href="#depoimentos">Depoimentos</a>
+        <a href="#faq">FAQ</a>
+        <a href="#produtos" class="btn btn-primary">Começar Agora</a>
+    </div>
+</div>
+
+<!-- ==========================================
+     HERO
+=========================================== -->
+<section class="hero" id="inicio">
+    <div class="container">
+        <div class="hero-inner">
+            <div class="hero-badge">
+                <span class="dot"></span>
+                Mais de 2.300 estudantes aprovados com nosso método
+            </div>
+
+            <h1>
+                Estudar Muito Não é<br>
+                o Mesmo Que <em>Estudar Certo.</em>
+            </h1>
+
+            <p class="hero-sub">
+                Resumos acadêmicos completos, organizados por especialistas e prontos para usar —
+                para quem precisa de resultado real sem desperdiçar as horas que não tem.
+            </p>
+
+            <div class="hero-actions">
+                <a href="#produtos" class="btn btn-accent btn-lg">
+                    <i class="fas fa-download"></i>
+                    Ver Todos os Resumos
+                </a>
+                <a href="#como-funciona" class="btn btn-ghost btn-lg">
+                    Como funciona <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="hero-trust">
+                <div class="hero-trust-item">
+                    <span class="stars">★★★★★</span>
+                    <span>4.9/5 avaliação</span>
+                </div>
+                <div class="hero-trust-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>Garantia de 7 dias</span>
+                </div>
+                <div class="hero-trust-item">
+                    <i class="fas fa-bolt"></i>
+                    <span>Acesso imediato após o pagamento</span>
+                </div>
+                <div class="hero-trust-item">
+                    <i class="fas fa-lock"></i>
+                    <span>Pagamento 100% seguro</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==========================================
+     STATS BAR
+=========================================== -->
+<section class="stats-bar">
+    <div class="container">
+        <div class="stats-grid">
+            <div class="stat-item fade-in">
+                <div class="stat-number"><span class="counter" data-target="2300">0</span><span>+</span></div>
+                <div class="stat-label">Estudantes aprovados</div>
+            </div>
+            <div class="stat-item fade-in">
+                <div class="stat-number"><span class="counter" data-target="150">0</span><span>+</span></div>
+                <div class="stat-label">Resumos disponíveis</div>
+            </div>
+            <div class="stat-item fade-in">
+                <div class="stat-number"><span class="counter" data-target="98">0</span><span>%</span></div>
+                <div class="stat-label">Taxa de satisfação</div>
+            </div>
+            <div class="stat-item fade-in">
+                <div class="stat-number">4.<span>9</span> <span style="font-size:24px;color:var(--accent)">★</span></div>
+                <div class="stat-label">Avaliação média</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==========================================
+     HOW IT WORKS
+=========================================== -->
+<section class="how-it-works section" id="como-funciona">
+    <div class="container">
+        <div class="section-header fade-in">
+            <div class="section-tag"><i class="fas fa-route"></i> Simples assim</div>
+            <h2>Do pagamento ao aprendizado<br>em menos de 3 minutos</h2>
+            <p>Sem burocracia, sem espera. Você escolhe, paga com segurança e já começa a estudar.</p>
+        </div>
+
+        <div class="steps-grid">
+            <div class="step-card fade-in">
+                <div class="step-number">1</div>
+                <h3>Escolha sua matéria</h3>
+                <p>Selecione o resumo ou pacote ideal para o seu objetivo — vestibular, ENEM, concurso ou faculdade.</p>
+            </div>
+            <div class="step-card fade-in">
+                <div class="step-number">2</div>
+                <h3>Pagamento seguro</h3>
+                <p>PIX, cartão de crédito ou boleto. Ambiente 100% criptografado e protegido contra fraudes.</p>
+            </div>
+            <div class="step-card fade-in">
+                <div class="step-number">3</div>
+                <h3>Baixe e comece agora</h3>
+                <p>Acesso imediato. PDFs de alta qualidade disponíveis para download e uso em qualquer dispositivo.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==========================================
+     PRODUCTS
+=========================================== -->
+<section class="products section" id="produtos">
+    <div class="container">
+        <div class="section-header fade-in">
+            <div class="section-tag"><i class="fas fa-graduation-cap"></i> Escolha seu plano</div>
+            <h2>Resumos para cada fase<br>da sua jornada acadêmica</h2>
+            <p>Do primeiro resumo ao acesso completo — você decide o quanto quer se preparar.</p>
+        </div>
+
+        <div class="plans-grid">
+            <!-- PLAN 1 -->
+            <div class="plan-card fade-in">
+                <div class="plan-name">INDIVIDUAL</div>
+                <div class="plan-title">Resumo Unitário</div>
+                <div class="plan-price">
+                    <div class="current">
+                        <span class="currency">R$</span>
+                        <span class="amount">9</span>
+                        <span class="cents">,90</span>
+                    </div>
+                </div>
+                <div class="plan-desc">Perfeito para quem quer testar ou precisa de uma matéria específica.</div>
+                <ul class="plan-features">
+                    <li class="plan-feature">
+                        <span class="check"><i class="fas fa-check"></i></span>
+                        1 disciplina à sua escolha
+                    </li>
+                    <li class="plan-feature">
+                        <span class="check"><i class="fas fa-check"></i></span>
+                        PDF completo e organizado por tópicos
+                    </li>
+                    <li class="plan-feature">
+                        <span class="check"><i class="fas fa-check"></i></span>
+                        Acesso imediato por download
+                    </li>
+                    <li class="plan-feature">
+                        <span class="check"><i class="fas fa-check"></i></span>
+                        Compatível com todos os dispositivos
+                    </li>
+                    <li class="plan-feature">
+                        <span class="check"><i class="fas fa-check"></i></span>
+                        Conteúdo atualizado com as provas
+                    </li>
+                </ul>
+                <a href="#" class="btn btn-outline" style="width:100%;">
+                    Escolher Matéria
+                </a>
+                <div class="plan-guarantee">
+                    <i class="fas fa-shield-alt"></i> Garantia de 7 dias
+                </div>
+            </div>
+
+            <!-- PLAN 2 — POPULAR -->
+            <div class="plan-card popular fade-in">
+                <div class="popular-badge">✦ MAIS POPULAR</div>
+                <div class="plan-name">COMPLETO</div>
+                <div class="plan-title">Acesso Ilimitado</div>
+                <div class="plan-price">
+                    <div class="from">De R$ 197,00</div>
+                    <div class="current">
+                        <span class="currency">R$</span>
+                        <span class="amount">97</span>
+                        <span class="cents">,00</span>
+                    </div>
+                </div>
+                <div class="plan-desc">Para quem quer máxima preparação e o melhor custo-benefício do mercado.</div>
+                <ul class="plan-features">
+                    <li class="plan-feature">
+                        <span class="check"><i class="fas fa-check"></i></span>
+                        Todas as disciplinas disponíveis
+                    </li>
+                    <li class="plan-feature">
+                        <span class="check"><i class="fas fa-check"></i></span>
+                        150+ resumos completos
+                    </li>
+                    <li class="plan-feature">
+                        <span class="check"><i class="fas fa-check"></i></span>
+                        Mapas mentais de cada matéria
+                    </li>
+                    <li class="plan-feature">
+                        <span class="check"><i class="fas fa-check"></i></span>
+                        Exercícios resolvidos incluídos
+                    </li>
+                    <li class="plan-feature">
+                        <span class="check"><i class="fas fa-check"></i></span>
+                        Atualizações gratuitas vitalícias
+                    </li>
+                    <li class="plan-feature">
+                        <span class="check"><i class="fas fa-check"></i></span>
+                        Suporte prioritário por email
+                    </li>
+                    <li class="plan-feature bonus">
+                        <span class="check"><i class="fas fa-gift"></i></span>
+                        Bônus: Técnicas de Memorização (R$ 47)
+                    </li>
+                    <li class="plan-feature bonus">
+                        <span class="check"><i class="fas fa-gift"></i></span>
+                        Bônus: Cronograma Completo de Estudos (R$ 37)
+                    </li>
+                </ul>
+                <a href="#" class="btn btn-primary" style="width:100%;">
+                    <i class="fas fa-rocket"></i> Quero Acesso Completo
+                </a>
+                <div class="plan-guarantee">
+                    <i class="fas fa-shield-alt"></i> Garantia de 7 dias — risco zero
+                </div>
+            </div>
+
+            <!-- PLAN 3 -->
+            <div class="plan-card fade-in">
+                <div class="plan-name">ESSENCIAL</div>
+                <div class="plan-title">Kit Vestibular</div>
+                <div class="plan-price">
+                    <div class="from">De R$ 69,00</div>
+                    <div class="current">
+                        <span class="currency">R$</span>
+                        <span class="amount">47</span>
+                        <span class="cents">,00</span>
+                    </div>
+                </div>
+                <div class="plan-desc">Ideal para vestibular e ENEM — as 7 disciplinas que mais caem nas provas.</div>
+                <ul class="plan-features">
+                    <li class="plan-feature">
+                        <span class="check"><i class="fas fa-check"></i></span>
+                        7 disciplinas fundamentais
+                    </li>
+                    <li class="plan-feature">
+                        <span class="check"><i class="fas fa-check"></i></span>
+                        Matemática, Português e Redação
+                    </li>
+                    <li class="plan-feature">
+                        <span class="check"><i class="fas fa-check"></i></span>
+                        Ciências da Natureza e Humanas
+                    </li>
+                    <li class="plan-feature">
+                        <span class="check"><i class="fas fa-check"></i></span>
+                        Mapas mentais incluídos
+                    </li>
+                    <li class="plan-feature">
+                        <span class="check"><i class="fas fa-check"></i></span>
+                        Foco nos temas mais cobrados
+                    </li>
+                    <li class="plan-feature">
+                        <span class="check"><i class="fas fa-check"></i></span>
+                        Suporte por email
+                    </li>
+                </ul>
+                <a href="#" class="btn btn-outline" style="width:100%;">
+                    Garantir Kit Vestibular
+                </a>
+                <div class="plan-guarantee">
+                    <i class="fas fa-shield-alt"></i> Garantia de 7 dias
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==========================================
+     BENEFITS
+=========================================== -->
+<section class="benefits section" id="beneficios">
+    <div class="container">
+        <div class="section-header fade-in">
+            <div class="section-tag"><i class="fas fa-star"></i> Por que o StudyPack funciona</div>
+            <h2>O que muda quando você<br>estuda do jeito certo</h2>
+            <p>Não é sobre estudar mais. É sobre usar o tempo que você tem com máxima inteligência.</p>
+        </div>
+
+        <div class="benefits-grid">
+            <div class="benefit-card fade-in">
+                <div class="benefit-icon blue"><i class="fas fa-clock"></i></div>
+                <h3>Economize até 8h por semana</h3>
+                <p>Chega de passar horas resumindo o que já está pronto. Use esse tempo para revisar, praticar e realmente fixar o conteúdo.</p>
+            </div>
+            <div class="benefit-card fade-in">
+                <div class="benefit-icon amber"><i class="fas fa-layer-group"></i></div>
+                <h3>Tudo organizado por tópicos</h3>
+                <p>Estrutura clara, hierarquia de informação e linguagem objetiva. Sem enrolação, sem páginas que não levam a lugar nenhum.</p>
+            </div>
+            <div class="benefit-card fade-in">
+                <div class="benefit-icon green"><i class="fas fa-bullseye"></i></div>
+                <h3>Foco no que realmente cai</h3>
+                <p>Conteúdo selecionado com base nas principais provas — ENEM, FUVEST, UNICAMP, concursos federais e estaduais.</p>
+            </div>
+            <div class="benefit-card fade-in">
+                <div class="benefit-icon purple"><i class="fas fa-mobile-alt"></i></div>
+                <h3>Estude em qualquer lugar</h3>
+                <p>PDF otimizado para celular, tablet e computador. Seu material de estudo sempre com você, com ou sem internet.</p>
+            </div>
+            <div class="benefit-card fade-in">
+                <div class="benefit-icon red"><i class="fas fa-sync-alt"></i></div>
+                <h3>Sempre atualizado</h3>
+                <p>O conteúdo é revisado regularmente conforme as provas mudam. Você recebe as atualizações sem nenhum custo adicional.</p>
+            </div>
+            <div class="benefit-card fade-in">
+                <div class="benefit-icon indigo"><i class="fas fa-user-graduate"></i></div>
+                <h3>Criado por especialistas reais</h3>
+                <p>Cada resumo é elaborado por professores com mais de 10 anos de experiência em preparação para vestibulares e concursos.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==========================================
+     TESTIMONIALS
+=========================================== -->
+<section class="testimonials section" id="depoimentos">
+    <div class="container">
+        <div class="section-header fade-in">
+            <div class="section-tag"><i class="fas fa-heart"></i> Quem já estudou assim</div>
+            <h2>Resultados reais de quem<br>parou de lutar contra o conteúdo</h2>
+            <p>Mais de 2.300 estudantes já tomaram essa decisão. Veja o que eles têm a dizer.</p>
+        </div>
+
+        <div class="testimonials-grid">
+            <div class="testimonial-card fade-in">
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-text">
+                    "Passei 2 meses tentando resumir Biologia sozinha. Em 3 dias com o StudyPack aprendi o que não aprendi em todo esse tempo. Na prova do ENEM, Biologia foi a matéria que me salvou."
+                </p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">M</div>
+                    <div class="author-info">
+                        <strong>Marina Rodrigues</strong>
+                        <span>23 anos — Aprovada no ENEM | Medicina UNICAMP</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card fade-in">
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-text">
+                    "Fiz concurso em 60 dias usando os resumos de Direito Constitucional do StudyPack. Resultado: aprovado em 2º lugar. O material é cirúrgico — nada a mais, nada a menos."
+                </p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">C</div>
+                    <div class="author-info">
+                        <strong>Carlos Mendonça</strong>
+                        <span>28 anos — Aprovado em concurso federal (2º lugar)</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card fade-in">
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-text">
+                    "Finalmente entendi Cálculo. Os resumos explicam de um jeito que nenhum professor da faculdade conseguiu. Passei na prova que eu tinha rodado duas vezes. Vale cada centavo."
+                </p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">L</div>
+                    <div class="author-info">
+                        <strong>Letícia Almeida</strong>
+                        <span>20 anos — Engenharia | USP São Paulo</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==========================================
+     OBJECTIONS
+=========================================== -->
+<section class="objections section">
+    <div class="container">
+        <div class="section-header fade-in">
+            <div class="section-tag"><i class="fas fa-comments"></i> Sem rodeios</div>
+            <h2>O que passa pela sua cabeça<br>antes de tomar a decisão</h2>
+            <p>Respondemos com honestidade — porque você merece clareza antes de investir.</p>
+        </div>
+
+        <div class="objections-grid">
+            <div class="objection-card fade-in">
+                <div class="objection-question">
+                    <div class="objection-icon"><i class="fas fa-question"></i></div>
+                    <h4>"Já tentei outros resumos e não funcionou para mim."</h4>
+                </div>
+                <p class="objection-answer">
+                    A maioria dos resumos disponíveis são cópias de livros didáticos — densos, desorganizados e sem foco em provas. O StudyPack foi desenvolvido com metodologia de aprendizagem ativa: estrutura que favorece a retenção, linguagem objetiva e conteúdo selecionado estrategicamente. É feito pensando em quem precisa passar, não em quem quer impressionar.
+                </p>
+            </div>
+
+            <div class="objection-card fade-in">
+                <div class="objection-question">
+                    <div class="objection-icon"><i class="fas fa-question"></i></div>
+                    <h4>"É caro demais para um simples resumo digital."</h4>
+                </div>
+                <p class="objection-answer">
+                    Entendemos. Mas pense no custo real de reprovar: mais um semestre de mensalidade, mais tempo perdido, mais energia. Um material que te faz passar representa uma economia enorme. E se não funcionar — você tem 7 dias para reembolso total, sem burocracia, sem justificativa. O risco é completamente seu.
+                </p>
+            </div>
+
+            <div class="objection-card fade-in">
+                <div class="objection-question">
+                    <div class="objection-icon"><i class="fas fa-question"></i></div>
+                    <h4>"Não tenho tempo suficiente para estudar de qualquer forma."</h4>
+                </div>
+                <p class="objection-answer">
+                    Exatamente por isso esse produto existe. Quando você não tem tempo, não pode desperdiçar o pouco que tem resumindo livros. O StudyPack entrega o conteúdo já organizado, priorizado e pronto. Você usa o tempo que tem para o que importa: revisar, fixar e praticar.
+                </p>
+            </div>
+
+            <div class="objection-card fade-in">
+                <div class="objection-question">
+                    <div class="objection-icon"><i class="fas fa-question"></i></div>
+                    <h4>"Prefiro fazer meu próprio resumo para aprender melhor."</h4>
+                </div>
+                <p class="objection-answer">
+                    Fazer o próprio resumo é válido — mas exige tempo e domínio prévio que nem sempre temos. O StudyPack funciona como base sólida: você parte de um material estruturado e adiciona suas anotações. É a combinação mais eficiente entre estrutura profissional e personalização.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==========================================
+     CTA SECTION
+=========================================== -->
+<section class="cta-section" id="oferta">
+    <div class="container">
+        <div class="cta-inner container-sm">
+            <span class="badge badge-accent">
+                <i class="fas fa-fire"></i> Oferta por tempo limitado
+            </span>
+            <h2>
+                Sua aprovação começa com<br>
+                a <em>decisão certa.</em>
+            </h2>
+            <p>
+                Mais de 2.300 estudantes já escolheram estudar com mais inteligência.
+                O próximo pode ser você — com garantia total de 7 dias e acesso imediato.
+            </p>
+
+            <div class="guarantee-box">
+                <i class="fas fa-shield-alt"></i>
+                <p><strong>Garantia incondicional de 7 dias.</strong> Se por qualquer motivo você não ficar satisfeito, devolvemos 100% do seu dinheiro. Sem perguntas, sem burocracia.</p>
+            </div>
+
+            <div class="hero-actions" style="justify-content:center;">
+                <a href="#produtos" class="btn btn-accent btn-lg">
+                    <i class="fas fa-rocket"></i> Quero Começar Agora
+                </a>
+            </div>
+
+            <div class="cta-trust-row">
+                <div class="cta-trust-item"><i class="fas fa-check-circle"></i> Acesso imediato</div>
+                <div class="cta-trust-item"><i class="fas fa-check-circle"></i> Garantia de 7 dias</div>
+                <div class="cta-trust-item"><i class="fas fa-check-circle"></i> Pagamento 100% seguro</div>
+                <div class="cta-trust-item"><i class="fas fa-check-circle"></i> Funciona em qualquer dispositivo</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==========================================
+     FAQ
+=========================================== -->
+<section class="faq section" id="faq">
+    <div class="container">
+        <div class="section-header fade-in">
+            <div class="section-tag"><i class="fas fa-question-circle"></i> Perguntas frequentes</div>
+            <h2>Tudo que você precisa saber<br>antes de comprar</h2>
+        </div>
+
+        <div class="faq-list">
+            <div class="faq-item">
+                <button class="faq-question">
+                    Como recebo os resumos após o pagamento?
+                    <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">
+                        Imediatamente após a confirmação do pagamento, você recebe um email com o link de download. Não há espera — o acesso é instantâneo, 24 horas por dia, 7 dias por semana, inclusive nos finais de semana e feriados.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Em qual formato são os arquivos?
+                    <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">
+                        Todos os resumos são entregues em PDF de alta resolução, formatado para leitura clara em qualquer tamanho de tela. Funciona perfeitamente em celular, tablet, notebook e computador — online ou offline.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Os resumos são atualizados com frequência?
+                    <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">
+                        Sim. Nossa equipe monitora constantemente as mudanças nas principais provas (ENEM, vestibulares, concursos) e atualiza o conteúdo sempre que necessário. Clientes do Acesso Ilimitado recebem todas as atualizações gratuitamente, sem prazo de validade.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Qual é a política de reembolso?
+                    <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">
+                        Você tem 7 dias corridos a partir da compra para solicitar reembolso total. Sem questionamentos, sem burocracia. Basta enviar um email para suporte@studypack.com.br e o estorno é processado em até 5 dias úteis no cartão ou imediatamente via PIX.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Para quais provas os resumos são adequados?
+                    <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">
+                        Os resumos cobrem conteúdo para ENEM, FUVEST, UNICAMP, UNESP, vestibulares regionais, concursos públicos federais e estaduais, além de disciplinas universitárias das áreas de exatas, humanas e biológicas.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Posso imprimir os resumos?
+                    <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">
+                        Sim. Os PDFs são otimizados para impressão em A4 ou A5. Se você prefere estudar no papel, o layout foi desenhado para isso — tipografia legível, espaçamento generoso para anotações e diagramas claros.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==========================================
+     FOOTER
+=========================================== -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <div class="logo-icon"><i class="fas fa-book-open"></i></div>
+                    StudyPack
+                </div>
+                <p>Resumos acadêmicos criados por especialistas para quem quer resultado real — não horas desperdiçadas tentando organizar o que já está pronto.</p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                    <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Produtos</h4>
+                <ul>
+                    <li><a href="#">Resumo Individual</a></li>
+                    <li><a href="#">Kit Vestibular</a></li>
+                    <li><a href="#">Acesso Ilimitado</a></li>
+                    <li><a href="#">Todas as Disciplinas</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Empresa</h4>
+                <ul>
+                    <li><a href="#">Sobre nós</a></li>
+                    <li><a href="#">Como funciona</a></li>
+                    <li><a href="#">Depoimentos</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Suporte</h4>
+                <ul>
+                    <li><a href="#">Central de ajuda</a></li>
+                    <li><a href="#">Política de reembolso</a></li>
+                    <li><a href="#">Termos de uso</a></li>
+                    <li><a href="#">Privacidade</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <span>© 2025 StudyPack. Todos os direitos reservados. CNPJ: 00.000.000/0001-00</span>
+            <span>
+                <a href="#">Termos de Uso</a> ·
+                <a href="#">Privacidade</a> ·
+                <a href="#">Cookies</a>
+            </span>
+        </div>
+    </div>
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C+quero+saber+mais+sobre+os+resumos+do+StudyPack"
+   class="whatsapp-float"
+   target="_blank" rel="noopener"
+   aria-label="Falar no WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- ==========================================
+     JAVASCRIPT
+=========================================== -->
+<script>
+// ── HEADER SCROLL ──────────────────────────────────────────
+const header = document.getElementById('header');
+window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 10);
+}, { passive: true });
+
+// ── MOBILE MENU ────────────────────────────────────────────
+const menuToggle  = document.getElementById('menuToggle');
+const mobileMenu  = document.getElementById('mobileMenu');
+const menuClose   = document.getElementById('menuClose');
+
+menuToggle.addEventListener('click', () => {
+    mobileMenu.classList.add('active');
+    document.body.style.overflow = 'hidden';
+});
+
+const closeMenu = () => {
+    mobileMenu.classList.remove('active');
+    document.body.style.overflow = '';
+};
+
+menuClose.addEventListener('click', closeMenu);
+mobileMenu.addEventListener('click', e => { if (e.target === mobileMenu) closeMenu(); });
+mobileMenu.querySelectorAll('a').forEach(l => l.addEventListener('click', closeMenu));
+
+// ── FAQ ACCORDION ──────────────────────────────────────────
+document.querySelectorAll('.faq-question').forEach(btn => {
+    btn.addEventListener('click', () => {
+        const item   = btn.parentElement;
+        const answer = item.querySelector('.faq-answer');
+        const isOpen = item.classList.contains('open');
+
+        // Close all
+        document.querySelectorAll('.faq-item').forEach(i => {
+            i.classList.remove('open');
+            i.querySelector('.faq-answer').classList.remove('open');
+        });
+
+        // Open this if it was closed
+        if (!isOpen) {
+            item.classList.add('open');
+            answer.classList.add('open');
+        }
+    });
+});
+
+// ── COUNTER ANIMATION ──────────────────────────────────────
+function animateCounter(el) {
+    const target   = parseInt(el.dataset.target, 10);
+    const duration = 2200;
+    const start    = performance.now();
+    function tick(now) {
+        const p   = Math.min((now - start) / duration, 1);
+        const val = Math.round((1 - Math.pow(1 - p, 3)) * target);
+        el.textContent = val.toLocaleString('pt-BR');
+        if (p < 1) requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+}
+
+// ── INTERSECTION OBSERVER ─────────────────────────────────
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('visible');
+        entry.target.querySelectorAll('.counter').forEach(c => {
+            if (!c.dataset.counted) {
+                c.dataset.counted = '1';
+                animateCounter(c);
+            }
+        });
+        observer.unobserve(entry.target);
+    });
+}, { threshold: 0.15, rootMargin: '0px 0px -32px 0px' });
+
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+// Also observe stats bar wrapper for the counters
+const statsBar = document.querySelector('.stats-bar');
+if (statsBar) observer.observe(statsBar);
+
+// ── SMOOTH SCROLL ─────────────────────────────────────────
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', function(e) {
+        const href   = this.getAttribute('href');
+        if (href === '#') return;
+        const target = document.querySelector(href);
+        if (!target) return;
+        e.preventDefault();
+        const top = target.getBoundingClientRect().top + window.scrollY - header.offsetHeight - 16;
+        window.scrollTo({ top, behavior: 'smooth' });
+    });
+});
+</script>
+</body>
+</html>
